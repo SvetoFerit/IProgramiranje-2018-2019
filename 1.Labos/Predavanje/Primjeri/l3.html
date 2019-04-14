@@ -1,0 +1,247 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>L2</title>
+</head>
+
+<body>
+
+  <!-- ______________________________________________________ -->
+
+  <!-- Silazne selektori -->
+
+  <div class="container">
+    <div class="box">
+      I'm box
+    </div>
+  </div>
+
+  <style>
+    .container {
+      display: flex;
+      background-color: blue;
+    }
+
+    .container .box {
+      background-color: red;
+      padding: 50px;
+    }
+  </style>
+
+  <!-- ______________________________________________________ -->
+
+  <!-- Ulančani selektor -->
+  <h2 class="font-red font-bold">Hello world</h2>
+
+  <style>
+    .font-red.font-bold {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- ______________________________________________________ -->
+
+  <!-- Zajednički(common) selektor -->
+  <div class="page">
+    <h2>This is header</h2>
+    <p>This is some paragraph text</p>
+  </div>
+
+  <style>
+    .page {
+      border: 1px solid gray;
+    }
+
+    .page h2,
+    .page p {
+      color: blue;
+    }
+
+    /* Skraćeni zapis od navedih selektora */
+
+    /* 
+     .page h2 {
+       color: blue;
+     } 
+     
+     .page p {
+       color: blue;
+     }
+   */
+
+    .page h2 {
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+
+  <!-- ______________________________________________________ -->
+
+  <!-- pseudo klasa -->
+
+  <section>
+    <p>Mačka</p>
+    <p>Ovca</p>
+    <p>Svinja</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <span>Krava</span>
+    <span>Pas</span>
+    <p>Mačka</p>
+    <p>Ovca</p>
+    <p>Svinja</p>
+  </section>
+
+  <style>
+    span {
+      margin: 10px 0;
+      display: block;
+    }
+
+    /* Pomoću pseudo klase */
+
+    section p:nth-child(2) {
+      color: green;
+    }
+
+    /* Da bi selektor s pseudo klasom bio dohvaćen sljedeći 
+    uvijeti moraju biti ispunjeni (i uvijet):
+        
+        1. Element se nalazi na drugom mjestu unutar roditelja.
+        2. Element mora biti paragraf (p)
+        
+        Dodatno smo specifirali: Da se nalazi unutar section roditelja
+    */
+
+    section span:nth-of-type(2) {
+      color: green;
+    }
+
+    /* Selektor s of-type pseudo klasom za razliku od nth-child
+    child ima pojednostavljeni uvijet dohvaćanja selektora za i on
+    glasi: 
+        
+        1. Dohvati mi drugi paragraf element unutar section-a.
+
+    */
+  </style>
+
+  <!-- Primjer korištenja pseudo klasa s N uvijetima  -->
+
+  <table class="table">
+    <thead>
+        <th>Name 1</th>
+        <th>Name 2</th>
+        <th>Name 3</th>
+        <th>Name 4</th>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Stupac 1</td>
+        <td>Stupac 2</td>
+        <td>Stupac 3</td>
+        <td>Stupac 4</td>
+      </tr>
+      <tr>
+        <td>Stupac 1</td>
+        <td>Stupac 2</td>
+        <td>Stupac 3</td>
+        <td>Stupac 4</td>
+      </tr>
+      <tr>
+        <td>Stupac 1</td>
+        <td>Stupac 2</td>
+        <td>Stupac 3</td>
+        <td>Stupac 4</td>
+      </tr>
+      <tr>
+        <td>Stupac 1</td>
+        <td>Stupac 2</td>
+        <td>Stupac 3</td>
+        <td id="onlyID" class="fill-green">Stupac 4</td>
+      </tr>
+      <tr>
+        <td>Stupac 1</td>
+        <td>Stupac 2</td>
+        <td>Stupac 3</td>
+        <td>Stupac 4</td>
+      </tr>
+      <tr>
+        <td>Stupac 1</td>
+        <td>Stupac 2</td>
+        <td>Stupac 3</td>
+        <td>Stupac 4</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <style>
+  
+  .table {
+    border: 1px solid gray;
+    border-collapse: collapse;
+  }
+  
+  .table tr, .table td, .table th {
+    border: 1px solid gray;
+    padding: 15px;
+  }
+  
+  .table thead th {
+    background-color: tomato;
+    color: white;
+  }
+  
+  /* .table tr:nth-of-type(even) {
+    background-color: lightgray;
+  }
+  
+  .table td:nth-of-type(odd) {
+    background-color: lightblue;
+  } */
+  
+  /* .table tr:nth-of-type(odd) {
+    background-color: lightblue;
+  } */
+  
+  /* n ide od 0,1,2,3,4,5...*/
+  
+  /* .table tr:nth-of-type(3n)  { 
+      background-color: gray;
+  } */
+  
+  /* .table tr:nth-of-type(n+3)  { 
+      background-color: gray;
+  } */
+  
+  /* .table tr:first-of-type, .table tr:last-of-type {
+    background-color: gray;
+  } */
+  
+  /* .table tr:first-child, .table tr:last-child {
+    background-color: gray;
+  } */
+  
+  /* .fill-green {
+    background-color: green;
+    color: white;
+  }
+  
+  #onlyID {
+    background-color: red;
+  } */
+  
+  
+  </style>
+
+
+</body>
+
+</html>

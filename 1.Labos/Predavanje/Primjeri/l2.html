@@ -1,0 +1,177 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>L2</title>
+</head>
+
+<body>
+  
+  <!-- ______________________________________________________ -->
+  
+  <!-- Stiliziranje html tagova -->
+
+  <h2>This is colorful header</h2>
+  
+  <style>
+  
+  h2 {
+    color: lightgreen;
+  }
+  
+  </style>
+  
+  <!-- ______________________________________________________ -->
+  
+  <!-- HTML klase i njeno stiliziranje -->
+
+  <h2 class="h2">This is colorful header with class</h2>
+  
+  <style>
+  
+  .h2 {
+    color: lightblue;
+  }
+  
+  </style>
+  
+  <!-- ______________________________________________________ -->
+  
+  <!-- HTML id tag i njeno stiliziranje -->
+
+  <h2 id="h2">This is colorful header with id</h2>
+  
+  <style>
+  
+  #h2 {
+    color: pink;
+  }
+  
+  </style>
+  
+  <!-- ______________________________________________________ -->
+  
+  <!-- HTML element u kombinaciji s id-om i klasom -->
+
+  <h2 id="h2-id" class="h2-class">This is colorful header with id and a class</h2>
+  
+  <style>
+  
+  #h2-id {
+    color: purple;
+  }
+  
+  .h2-class {
+    color: red;
+  }
+  
+  </style>
+  
+  <!-- Zašto se style od klase nije primjenio ?  -->
+  
+  <!-- Zamislite sistem prema sljedećem sistemu -->
+  
+  <style>
+  
+  a {
+    /* Pogađam anchor element */
+    /* Vrijednost: 1 */
+  }
+  
+  .class {
+    /* Pogađam element s klasom */
+    /* Vrijednost: 10 */
+  }
+  
+  #id {
+    /* Pogađam element s id-om */
+    /* Vrijednost: 100 */
+  }
+  
+  /* Po sistemu bodovanja možemo vidjeti da id selektor nadjačava obični klasni selektor */
+  
+  /* Dodatni primjeri */
+  
+  div a {
+    /* Za svaki a element unutar div elementa */
+    /* Vrijednost div: 1 , vrijednost a: 1 */
+    /* Ukupna vrijednost ovoga selektora je 2 */
+  }
+  
+  div .class a {
+    /* Za svaki anchor element klase "class" koji se nalazi unutar div-a
+    /* Vrijednost div: 1 , vrijednost a: 1, vrijednost klase: 10 */
+    /* Ukupna vrijednost ovoga selektora je 12 */
+  }
+  
+  #ibeatall a {
+    /* Za svaki a element unutar elementa pod id-em "ibeatall" */
+    /* Vrijednost a: 1 , vrijednost id-a: 100 */
+    /* Ukupna vrijednost ovoga selektora je 101 */
+  }
+  
+  /* Što znači kada bi jedan te isti element pogađali s više različitih selektora
+     zadnji element bi imao prioritet */
+  
+  </style>
+  
+  <!-- ______________________________________________________ -->
+  
+  <!-- Što kad su dva selektora iste jačine ? -->
+  
+  <h2 class="first-selector second-selector"> 2 selector 1 rule </h2>
+  
+  <style>
+  
+  .first-selector {
+    color: red;
+  }
+  
+  .second-selector {
+    color: blue;
+  }
+  
+  /* U slučaju kada postoje dva selektora iste jačine pravilo se primjenjuje 
+     od onoga koji je posljednji definiran */
+  
+  </style>
+  
+  <!-- ______________________________________________________ -->
+  
+  <!-- Skombajmo selektore u party -->
+  
+  <p class="text-bold">Only bold</p>
+  <p class="text-bold text-size-l">Bold and text size</p>
+  <p class="text-bold text-size-l text-color-tomato">Party fiesta</p>
+  
+  <style>
+  
+  .text-bold {
+    font-weight: 700; 
+    font-weight: bold;
+  }
+  
+  .text-size-l {
+    font-size: 4.5rem;
+  }
+  
+  .text-color-tomato {
+    color: tomato;
+  }
+  
+  /* U navedenom primjeru koristimo kombinaciju različitih selektora, pošto svaki selektor
+    ima različita stilska pravila te se sva pravila primjenjuju u navedenom elementu. Svaki 
+    element može sadržavati jednu ili više klasa, te svaka klasa može se nalaziti u više 
+    elemenata, dok svaki element može imati unikatan ID tag,taj ID tag se ne može nalaziti 
+    niti jednom drugom elementu osim u navedenom. */
+  
+  </style>
+  
+  <!-- ______________________________________________________ -->
+  
+  
+</body>
+
+</html>
