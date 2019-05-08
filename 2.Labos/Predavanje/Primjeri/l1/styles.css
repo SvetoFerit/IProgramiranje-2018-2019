@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+span {
+    color: tomato;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.content-box {
+    box-sizing: content-box;
+    background: yellow;
+    text-align: center;
+    width: 320px;
+    margin: 45px;
+    padding: 45px;
+    border: 10px solid green;
+}
+
+.border-box {
+    box-sizing: border-box;
+    background: purple;
+    color: white;
+    text-align: center;
+    width: 320px;
+    margin: 45px;
+    padding: 45px;
+    border: 10px solid blue;
+}
